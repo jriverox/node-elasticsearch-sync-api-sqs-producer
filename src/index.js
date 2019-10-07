@@ -6,11 +6,12 @@ import routes from './routes'
 import config from './config'
 import LogManager from './utils/logManager'
 import dbObjectManager from './utils/dbObjectManager'
+import docs from './utils/api.docs'
 
 const server = new Koa()
 const logManager = new LogManager()
 
-server.use(bodyParser())
+server.use(bodyParser()).use(docs)
 
 // eslint-disable-next-line array-callback-return
 routes.map(r => {

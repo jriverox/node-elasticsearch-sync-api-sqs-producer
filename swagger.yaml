@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: API Documentation
+  version: '1.0'
+host: api.server.test
+basePath: /
+schemes:
+  - https
+paths:
+  /personalization/{country}/{campaign}/{personalizationType}:
+    get:
+      summary: 'request a job for synchronization personalizations to elasticseach'
+      produces:
+        - application/json
+      parameters:
+        - name: country
+          in: path
+          description: country two letter iso code
+          required: true
+          type: string
+        - name: campaign
+          in: path
+          description: campaign code example 201915
+          required: true
+          type: string
+        - name: personalizationType
+          in: path
+          description: code of personalization type, example opm, sr, odd, opm...
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK

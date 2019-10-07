@@ -49,6 +49,8 @@
     "koa-router": "^7.4.0",
     "moment": "^2.24.0",
     "mongodb": "^3.3.2",
+    "swagger2": "^1.0.5",
+    "swagger2-koa": "^1.0.4",
     "sync-request": "^6.1.0"
   }
 }
