@@ -1,0 +1,54 @@
+{
+  "name": "buscador-sync-api-producer",
+  "version": "1.0.0",
+  "description": "This is an implementation of producer app. It exposes an rest endpoint with koa, receive a request and then put on a AWS sqs queue. The sencod component (buscador-sync-lambdaConsumer repo) is responsible to get a message queue and read mongodb and finally bulk data to elasticsearch",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "lint:code": "eslint src -f stylish",
+    "lint:report": "eslint src -f html -o reports/lint.html",
+    "start:server": "babel-node -- ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist --copy-files && cp env.yaml ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jriverox/buscador-sync-api-producer.git"
+  },
+  "keywords": [
+    "node.js",
+    "koa",
+    "api",
+    "aws",
+    "sqs"
+  ],
+  "author": "jhony rivero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jriverox/buscador-sync-api-producer/issues"
+  },
+  "homepage": "https://github.com/jriverox/buscador-sync-api-producer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.543.0",
+    "dotenv": "^8.1.0",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.2",
+    "sync-request": "^6.1.0"
+  }
+}
