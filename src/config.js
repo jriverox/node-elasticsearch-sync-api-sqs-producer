@@ -29,8 +29,7 @@ const config = {
   },
   sqs: {
     region: 'us-east-1',
-    accountId: process.env.AWS_ACCOUNT_ID,
-    personalizationQueue: 'buscador_sync_queue',
+    queueUrl: process.env.SQS_URL,
   },
   elasticLogging: {
     endpoint:
