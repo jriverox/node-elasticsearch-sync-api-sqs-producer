@@ -30,8 +30,7 @@ export default class {
         config.elasticLogging.enabledInfo === true ||
         config.elasticLogging.enabledError === true
       ) {
-        const response = request('POST', this.url, { json: logEvent })
-        console.log(response)
+        request('POST', this.url, { json: logEvent })
       }
     } catch (error) {
       console.error('Logging error: ', error)

@@ -4,7 +4,7 @@ dotenv.config()
 
 const config = {
   port: 3000,
-  batchSize: 15000,
+  batchSize: 10000,
   mongodb: {
     PE: {
       connectionString: process.env.MONGODB_PE,
@@ -24,7 +24,7 @@ const config = {
     },
     CR: {
       connectionString: process.env.MONGODB_CR,
-      database: 'costaricadb',
+      database: 'BelcorpCostaRica',
     },
   },
   sqs: {

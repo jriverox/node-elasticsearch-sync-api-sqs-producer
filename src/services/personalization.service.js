@@ -54,14 +54,7 @@ export default class {
           )
           tasks.push(task)
           batchCount += 1
-          // console.log(
-          //   'batchCount:',
-          //   batchCount,
-          //   'page:',
-          //   page,
-          //   'totalPages:',
-          //   totalPages
-          // )
+
           if (batchCount === 10 || page === totalPages - 1) {
             console.log('enviando', tasks.length)
             // eslint-disable-next-line no-await-in-loop
