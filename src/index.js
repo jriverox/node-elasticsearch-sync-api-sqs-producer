@@ -37,6 +37,7 @@ dbObjectManager
     }
   )
   .catch(error => {
+    console.log(error)
     logManager.logError(
       'index',
       'dbObjectManager.fetchAllDbs',
