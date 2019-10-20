@@ -10,18 +10,6 @@ const config = {
       connectionString: process.env.MONGODB_PE,
       database: 'BelcorpPeru',
     },
-    CL: {
-      connectionString: process.env.MONGODB_CL,
-      database: 'BelcorpChile',
-    },
-    PA: {
-      connectionString: process.env.MONGODB_PA,
-      database: 'BelcorpPanama',
-    },
-    CO: {
-      connectionString: process.env.MONGODB_CO,
-      database: 'BelcorpColombia',
-    },
     CR: {
       connectionString: process.env.MONGODB_CR,
       database: 'BelcorpCostaRica',
