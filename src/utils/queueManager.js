@@ -6,7 +6,7 @@ AWS.config.update({ region: config.sqs.region })
 export default class {
   constructor() {
     this.sqs = new AWS.SQS({ apiVersion: '2012-11-05' })
-    this.queueUrl = `https://sqs.${config.sqs.region}.amazonaws.com/${config.sqs.accountId}/${config.sqs.personalizationQueue}`
+    this.queueUrl = config.sqs.queueUrl
   }
 
   async send(synchronizationTask) {
