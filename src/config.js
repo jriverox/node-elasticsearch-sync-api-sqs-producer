@@ -20,8 +20,7 @@ const config = {
     queueUrl: process.env.SQS_URL,
   },
   elasticLogging: {
-    endpoint:
-      'https://vpc-logger-juonfggfaemlljdhl2gt6ojhfa.us-east-1.es.amazonaws.com',
+    endpoint: process.env.LOGGER_URL,
     pattern: 'dev-buscador-sync2-',
     type: 'LogEvent',
     enabledInfo: true,
